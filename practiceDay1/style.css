@@ -1,0 +1,20 @@
+div{
+    color:red;
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+/* span{
+    border: 2px solid black;
+
+}
+
+span > ol{
+    background-color: lightgray;
+}
+span>h2{
+    color: purple;
+    background-color: lightgray;
+} */

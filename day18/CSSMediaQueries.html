@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS media query</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        @media screen and (orientation: portrait) {        /* screen- it shows that where to use website.*/
+            body{
+                border: 2px solid purple;
+            }
+        }
+
+        @media only screen and (max-width: 455px){   /* Media query ka use  website ko responsive banane me kiya jata hai. yha 0-455px tak background color blue hoga aur jaise hi 455px se jyada hoga ye red ho jayega, means media query inactive ho jayegi*/
+            body{
+
+                background-color: blue;
+            }
+            
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        
+        /* Syntax*/
+        /* @media not|only mediatype and (expressions) {        
+            CSS-Code;
+        } */
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        Hey I am a red body guy!
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

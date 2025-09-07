@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+        /* Element Selector */
+        div {           /* this div is called as "SELECTOR" */
+            color: red;
+            background-color: yellow;
+        }
+
+        /* Class Selector */
+        .red {            /*Red means class is Red*/
+            color: blue;
+            background-color: magenta;
+        }
+
+        /* ID Selector */
+        #green{         /*Green means ID is Green   */
+            color: green;
+            background-color: lightgray;
+        }
+
+        /* Child Selector */
+        div > p {          /* This selects p elements must be direct children of div */
+            color: white;
+            background-color: black;
+        }
+
+        /* Descendant Selector */
+        div p {           /* This selects p elements that are descendants of div */
+            color: rgb(81, 0, 255);
+            background-color: lightblue;
+        }
+
+        /* Universal Selector */
+        * {              /* This selects all elements */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* pseudo Selector */
+        a:visited {   /* visit hone ke baad kis color ka dikhega vo control karta hai*/
+            color: rgb(234, 119, 4);
+            
+        }
+
+        a:link{
+            color: blue; /* jo link visit nahi kiya hai vo kis color ka dikhega vo control karta hai */
+        }
+
+        a:active{
+            color: red; /* jo link click kiya hai vo kis color ka dikhega vo control karta hai */
+        }
+
+        a:hover{
+            color: green; /* jo link par mouse leke jaate hai vo kis color ka dikhega vo control karta hai */
+        }
+
+        p:first-child {
+            color: white;
+            background-color: rgb(255, 12, 12); /* if p is a first child of its parent, apply these properties*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <main>
+            <p>
+                Im First
+            </p>
+            <p>
+                Im Second
+            </p>
+        </main>
+    </div>
+    <div>
+        This is Div
+    </div>
+    
+    <div class="red">
+        This is Another Div
+    </div>
+    <div id="green">
+        This is a third Div
+        <p>Im para inside div</p>
+    </div>
+    <div id="green">
+        <article><p>Im para inside div</p></article>
+    </div>
+    <a href="https://www.google.com">Google</a>  <!-- ye link hai -->           
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.fast.com">Fast</a>
+    <a href="https://www.github.com">Github</a>
+</body>
+</html>
+<!--

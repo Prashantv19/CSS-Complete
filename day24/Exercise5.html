@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <style>
+      @media screen and (orientation: portrait) {
+        div {
+          flex-direction: column;
+        }
+        .s3 {
+          order: -1;
+        }
+        .s3,
+        .img1 {
+          height: 95vw;
+          margin: auto;
+          margin-top: 2%;
+        }
+      }
+
+      /* :root {
+        --primary-color: #ad5afacc;
+        --text-color: white;
+        --secondary-color: #e3cff5cc;
+      } */
+
+      :root {
+        --primary-color: #d6710dcc;
+        --text-color: white;
+        --secondary-color: #e7eb77cc;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      main {
+        max-width: 100vw;
+      }
+
+      body {
+        background-color: var(--secondary-color);
+      }
+      header {
+        position: sticky;
+        top: 0px;
+        z-index: 1000;
+      }
+      nav {
+        background-color: var(--primary-color);
+        padding: 15px; /*this padding is apply on ul i.e. overall*/
+        text-align: right;
+      }
+      ul li {
+        list-style: none;
+        display: inline;
+        padding: 5px; /* this padding is apply on only li i.e. one  & only single item*/
+        font-weight: bolder;
+      }
+      a {
+        text-decoration: none;
+      }
+      .s1 {
+        margin: 20px;
+        padding: 5px;
+      }
+      div {
+        display: flex;
+      }
+      .p1 {
+        text-align: justify;
+      }
+      .s3 {
+        display: flex;
+      }
+      img {
+        margin: 10px;
+        height: 50vw;
+
+        border: 1px solid black;
+        border-radius: 25px;
+      }
+
+      hr {
+        border: 2px solid var(--primary-color);
+      }
+      .s2 {
+        margin: 10px;
+        padding: 5px;
+      }
+      .p2 {
+        margin: 2%;
+        padding: 2%;
+        min-height: 60vh;
+        text-align: justify;
+        border: 2px solid var(--primary-color);
+        border-radius: 20px;
+      }
+      .logo {
+        border: none;
+        max-height: 50px;
+        position: fixed; /* positioned relative to nearest positioned ancestor */
+        right: 10px; /* distance from right side */
+        bottom: 10px; /* distance from bottom */
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <section class="s1">
+          <h2>Lucknow - The city of Nawab</h2>
+          <p class="p1">
+            Lucknow, a large city in northern India, is the capital of the state
+            of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal
+            gateway. Nearby, the 18th-century Bara Imambara shrine has a huge
+            arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels
+            with city views from its upper balconies. Close by, the grand
+            Victorian Husainabad Clock Tower was built as a victory column in
+            1881.
+          </p>
+        </section>
+
+        <section class="s3">
+          <img class="img1" src="lucknow.jpg" alt="my image" />
+        </section>
+      </div>
+
+      <hr />
+      <section class="s2">
+        <p class="p2">
+          The Nawabs of Lucknow acquired the name after the reign of the third
+          Nawab when Lucknow became their capital. The city became North India's
+          cultural capital, and its nawabs, best remembered for their refined
+          and extravagant lifestyles, were patrons of the arts.
+        </p>
+
+        <img class="logo" src="logo.png" alt="logo" />
+      </section>
+    </main>
+
+    <footer>
+      <p>@copy All rights reserved.</p>
+    </footer>
+  </body>
+</html>

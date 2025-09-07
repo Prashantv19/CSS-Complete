@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh; ;
+            border: 2px solid black;
+            overflow: scroll; /* hidden, visible, scroll, auto */
+            /* overflow: auto;  ye property tab use karte hai jab hume pata nahi hota ki content overflow karega ya nahi, agar overflow karta hai toh scroll bar show hoga */
+            /* overflow: visible; ye property tab use karte hai jab hume content ko overflow karna hai, ye default property hai */
+            /* overflow: hidden; ye property tab use karte hai jab hume content ko overflow nahi karna hai */
+            white-space: nowrap; /* ye property text ko ek line me rakhne ke liye use karte hai */
+
+            text-overflow: ellipsis; /* ye property text ko cut karne ke liye use karte hai , 3 dots show hoga*/
+
+            /* overflow-x: hidden; /*ye individually horizontal or vertical overflow ko control karne ke liye use karte hai 
+             overflow-y: hidden; */
+             overflow: scroll hidden; /*hum dono chij ek sath kar sakte hai 1st is X and 2nd is Y*/
+
+            overflow: clip; /* iss property se text ko programtically bhi scroll nahi kar sakte*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt adipisci maiores repellendus dolores unde? Accusantium ipsam exercitationem cumque, assumenda corrupti culpa magnam repellendus eaque possimus esse, et facilis error provident velit inventore sapiente. Mollitia, sit. Repellendus doloribus repellat eveniet accusamus enim vel, molestiae ipsum vitae.
+        </div>
+</body>
+</html>

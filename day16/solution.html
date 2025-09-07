@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solution</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .parentBox {
+        margin: 4px;
+        padding: 3px;
+        height: 250px;
+        width: 150px;
+        border: 1px solid rgb(166, 163, 163);
+        border-radius: 10px;
+      
+        
+      }
+      
+      .subbox1 img {
+        padding: 3px;
+        height: 120px;
+        width: 140px;
+        border-radius: 10px;
+      }
+      .subbox1{
+        display: flex;
+        justify-content: center;
+      }
+      span {
+        padding: 1px;
+       margin: 2px;
+        font-size: 6px;
+        color: rgb(92, 90, 90);
+        border: 1px solid rgb(179, 179, 179);
+        border-radius: 10px;
+      }
+
+      .spanBox {
+        display: flex;
+        gap: 5px;
+      }
+    
+     
+      .button {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .button button{
+        padding: 2px;
+        background-color: #53cd57;
+        color: white;
+        border: 1px solid black;
+        border-radius: 25px;
+        font-size: 7px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .button button:hover {
+        background-color: #13ce1d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentBox">
+      <div class="subbox1">
+        <img src="jammu.jpg" alt="card image" />
+      </div>
+      <div class="spanBox">
+        <span>Nature</span>
+        <span>Mountains</span>
+      </div>
+
+      <div class="">
+        <h5 style="text-align: center;">Jammu and kashmir</h2>
+        <p style="font-size: 7px; text-align:justify font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; justify-items: center;">
+          Jammu and Kashmir (J&K) is a union territory of India, established in
+          2019 following the reorganization of the former state. A major tourist
+          destination, its economy is primarily driven by agriculture,
+          horticulture, and tourism.
+        </p>
+      </div>
+      <div class="button">
+        <button>Read More</button>
+        
+      </div>
+    </div>
+  </body>
+</html>

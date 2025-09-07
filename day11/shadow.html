@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+    <style>
+      div {
+        border: 2px solid black;
+        padding: 10px;
+        /* box-shadow: h-offset v-offset blur spread color inset; */
+        box-shadow: 5px 5px 15px 5px #26891d;
+      }
+      .text {
+        text-shadow: 2px 2px 4px #bb5d5d;
+      }
+      .text {
+        outline: 2px solid blue;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>This is a box with shadow.</div>
+    <p class="text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ducimus vel
+      soluta, inventore animi, vero ipsum expedita itaque alias sed beatae
+      nostrum excepturi.
+    </p>
+  </body>
+</html>
+<!-- difference bt outline and border -->
+ <!-- 1. outline ka radious set nahi kar sakte hai vo border ko follow karta hai -->
+  <!-- 2. border fix hota hai outline ko adjust kar sakte hai offset property se -->
+   <!-- 3. outline box model ka hissa nahi hota hai, border hota hai -->

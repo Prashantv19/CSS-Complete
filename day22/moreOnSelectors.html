@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child{  "means box apne parent ka first child hai".
+            background-color: red;
+        } */
+
+        /* .box::first-line{    "first line of your device, chahe koi bhi device ho"
+            color: yellow;
+        } */
+
+        /* .boxes *{    "boxes ke ander sare element ka color kar do blue"
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p, a, .box, [data-color="primary"]{   "Atribute selector", "grouping of selectors"
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(odd){      "pseudo selectors"
+            background-color: blue;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: red;
+        } */
+
+        .boxes::before {   /* "main content se pahle insert kar dega"*/
+            content: "Harry is good";
+            color: blue;
+        }
+
+        .boxes::after {    /* "main content bad insert kar dega" */
+            content: "Sigma course is also good";
+            color: red;
+        }
+
+        ::selection {      /*selected element ke uper style apply kar dega*/
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter {   /* first letter ko target kar sakte hai*/
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder {    /* placeholder ka color change kar sakte hai*/
+            color: rgb(84, 84, 88);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-BoxMOdel</title>
+    <style>
+        .box{
+            background-color: rgb(234, 240, 128);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            color: rgb(2, 15, 2);
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box; /* ye property height and width ko border and padding ke sath count karta hai but margin ko add nahi karta*/
+        }
+        .box2{
+            color: blue;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">This is Box-1</div>
+    <div class="box box2">This is Box-2</div>
+</body>
+</html>
+<!-- KYA SHIKHA -->
+<!-- css box model, border-box property, margin colaps -->
+<!-- CSS Box model is a box that wraps around HTML elements and consists of: margins, borders, padding, and the actual content -->
+
+<!-- Margin Collapsing: When the top and bottom margins of two elements meet, they combine to form a single margin that is equal to the larger of the two margins. This is known as margin collapsing. -->
+
+<!-- Box-sizing property: The box-sizing property in CSS is used to define how the total width and height of an element is calculated.isme hum marjin ko chhod dete hai bas padding and border ko add karte hai.-->

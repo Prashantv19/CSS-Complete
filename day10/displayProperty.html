@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display-Property</title>
+    <style>
+          .box{
+              border: 2px solid black;
+              padding: 10px;
+              margin: 10px;
+              width: 34vw;
+              height: 10vh;
+              background-color: lightblue;
+              /*display: inline;  /*In this case divs will behave like span but margin, padding, width ets property will not applying from top*/
+              display: inline-block; /*In this case property will applied*/
+
+          }
+          .box1{
+              display: none; /*In this case div will not be visible with space also*/
+              visibility: hidden; /*In this case div will not be visible but space will be there*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am Prashant Vishwakarma</div>
+    <div class="box">I am a web developer.</div>
+    <span> I am an engineer </span>
+  </body>
+</html>
+<!-- display: inline, inline-block, none, visibility: hidden -->

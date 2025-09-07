@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= ">
+    <title>CSS-Lists</title>
+    <style>
+        nav ul li{
+            list-style: devanagari;
+            list-style: none;   /* ye property list-style ko change  kar deti hai */
+            background-color: yellow;
+            list-style-position: inside;  /* ye property list style ko list content ke andar le aata hai */
+            list-style-type: "🦷";  /* we can change style type as emojis also*/
+            border: 2px solid red;
+            /* list-style-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png'); */
+            list-style: square inside url('https://cdn-icons-png.flaticon.com/512/25/25231.png'); /* ek baar me hum ek chij hi use karenge ya toh square ya url */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    </nav>
+</body>
+</html>

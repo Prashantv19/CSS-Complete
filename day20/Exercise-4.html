@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* ==============================
+         DEFAULT THEME (LIGHT)
+         ============================== */
+      :root {
+        --color1: rgb(133, 228, 171);
+        --bg1: rgb(13, 48, 13);
+
+        --color2: rgb(255, 0, 0);
+        --bg2: rgb(248, 255, 50);
+
+        --color3: rgb(201, 98, 98);
+        --bg3: rgb(15, 244, 244);
+
+        --defp: 2px;
+        --defm: 2px;
+
+        --imgp: 4px;
+        --imgm: 4px;
+      }/*we can write two root , so it can help to change theme easly*/
+
+      /* ==============================
+         DARK THEME
+         ============================== */
+      .dark-theme {
+        --color1: #fff;
+        --bg1: #222;
+
+        --color2: #ff6666;
+        --bg2: #444;
+
+        --color3: #ddd;
+        --bg3: #333;
+      }
+
+      /* ==============================
+         GLOBAL RESET
+         ============================== */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ==============================
+         HEADER
+         ============================== */
+      header {
+        background-color: var(--bg1);
+        color: var(--color1);
+        text-align: center;
+        margin: var(--defm);
+        padding: var(--defp);
+        border: 2px solid var(--color1);
+      }
+
+      header h1 {
+        margin-bottom: var(--defm);
+      }
+
+      header p {
+        color: var(--color3);
+        margin-top: var(--defm);
+      }
+
+      /* ==============================
+         SECTION HEADING
+         ============================== */
+      h2 {
+        background-color: var(--bg3);
+        color: var(--color3);
+        text-align: center;
+        border: 2px solid var(--color1);
+        margin: var(--defm);
+        padding: var(--defp);
+      }
+
+      /* ==============================
+         IMAGE GALLERY
+         ============================== */
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      img {
+        margin: var(--imgm);
+        padding: var(--imgp);
+        height: 500px;
+      }
+
+      /* ==============================
+         FOOTER
+         ============================== */
+      footer {
+        text-align: center;
+        background-color: var(--bg3);
+        color: var(--color3);
+        padding: 10px;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <!-- ==============================
+         HEADER
+         ============================== -->
+    <header>
+      <h1>Image Gallery</h1>
+      <p>This is an amazing image gallery</p>
+      <!-- Theme Toggle Button -->
+      
+    </header>
+
+    <!-- ==============================
+         MAIN CONTENT
+         ============================== -->
+    <main>
+      <h2>Profile Photos</h2>
+      <ul>
+        <li><img src="img1.png" alt="1st image" /></li>
+        <li><img src="img2.png" alt="2nd image" /></li>
+        <li><img src="img3.png" alt="3rd image" /></li>
+        <li><img src="img4.jpg" alt="4th image" /></li>
+      </ul>
+    </main>
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+    <footer>
+      <p>&copy; 2025 All rights reserved</p>
+    </footer>
+     </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Universal Selector (specificity - 0)*/
+      * {
+        color: green;
+      }
+
+      /* Element Selector (specificity - 1)*/
+      h1 {
+        color: aqua;
+      }
+
+      /* Class Selector  (specificity - 10)*/
+      .cred {
+        color: red; /* !important - it gains more importantance */
+      }
+      .cpurple {
+        color: purple;
+      }
+      .yellow {
+        color: yellow;
+      }
+      h1.yellow {
+        /* here specificity is 1 + 10 = 11*/
+        color: maroon;
+      }
+      /* Atribute selector  (specificity - 10)*/
+      [data-x="a"] {
+        color: brown;
+        background-color: pink;
+      }
+
+      /* ID Selector (specificity - 100) */
+      /* #blue{
+            color: blue;
+        } */
+
+      /* Inline Style (specificity - 1000)*/
+      /*ex:  <h1 style="color: orange;">CSS Specificity</h1> */
+
+      /* QUIZ */
+      /*
+        a.harryclass.rohan-class[href]:hover 
+            {
+            color: red;
+            } 
+        Soln :- 1 (element) + 20 (classes) + 10 (attribute) + 10 (pseudo-class) = 41.
+        So, the specificity value of the selector a.harryclass.rohan-class[href]:hover will be 41 
+        */
+
+      /* kaise deside karte hai ki kon sa color apply hoga */
+
+      /* 1. position and order is important (when same selector are there) - that mean jo sabse last me color hoga vo apply ho jayega */
+      
+      /* 2. Specificity (when different selector are there) - kon sa css selector sabse jada specific hai and then usko calculate karte hai, and then vo apply hoga */
+
+      /* So, the order of specificity is:
+        Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector */
+
+      /* always try to use less selectors so that you can override easily */
+
+      /* 3. Origin - the order in which "user agent stylesheet < handwritten style" hota hai */
+      /* 4. Importance  - !important flag in CSS is used to give a particular style rule the highest level of importance, overriding any other competing styles.*/
+
+      /* Note: ALWAYS TRY TO USE CLASS SELECTOR SO THAT YOU CAN OVERRIDE EASILY AND WRITE CODE WITH SURITY THAT NO NEED TO ADD MORE SPECIFICITY  */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="blue" class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+  </body>
+</html>

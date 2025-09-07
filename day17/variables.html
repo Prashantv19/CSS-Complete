@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Variables</title>
+    <style>
+        :root{
+            /* kisi bhi chij ke liye variable bana sakte hai like bg, no., value, strings, colors etc */
+            --color: rgb(202, 25, 202); /* global variable, it will work in whole document */
+            --seccolor: #8cd821;
+            --defpad: 15px;
+            --defop: 0.2;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: rgb(22,237, 112);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: var(--defpad);
+            border: 6px solid var(--color);
+        }
+        ul li:first-child{
+            --color: rgb(54, 28, 203); /* local variable, it will work only in this selector */
+           /* background-color: var(--color, yellow); /* if --color is not defined then it will take yellow color */
+            
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At recusandae hic fugit, quia deserunt tempora. Culpa impedit quam aut placeat id soluta mollitia quod ex consectetur distinctio temporibus eum iure aperiam amet ipsam corrupti accusamus cupiditate saepe fugit, dolorum dolor perferendis minus maiores non. Sint!
+    </div>
+</body>
+</html>

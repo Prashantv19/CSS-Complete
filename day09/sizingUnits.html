@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizing units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 12px; 
+        }
+        .box{
+            border: 2px solid black;
+            background-color: aqua;
+            box-sizing: border-box;
+            /* width: 1920px;   Fixed width  for my screen */
+            margin: auto; /* to center the box , we can't apply this property on inline elements. ex. <span>*/
+            width: 80vw;  /* it can adjust with the screen*/
+            height: 10vh; 
+            min-height: 80vh;
+        }
+        .box >div{
+            border: 2px solid rgb(0, 0, 0);
+            width: 50%; /* 50% of parent element */
+        }
+        .box >div >div{
+            border: 2px solid red;
+            width: 50%; /* 50% of parent element */
+        }
+        .container{
+            border: 2px solid black;
+            background-color: lightgreen;
+            box-sizing: border-box;
+            width: 80vw; /* 80% of viewport width */
+            /* height: 80vh; 80% of viewport height */
+            min-height: 80vh; /* minimum height 80% of viewport height */
+            margin: 23px auto;  /* top-bottom left-right . we can add margins like this*/
+            font-size: 18px; /* fixed font size */
+
+        }
+        .container p{
+            font-size: 1em; /* 1em = 16px (default font size of browser) */
+            font-size: 2em;/* 2em = 2*16px=32px ho jayega, that mean container ke font size ka 2x ho jayega */
+            font-size: 2rem; /* 2rem = 2*12px=24px ho jayega, that mean root element ke font size ka 2x ho jayega */
+
+        }
+
+        .mycont{
+            color: yellow;
+            background-color: red;
+            border: 2px solid black;    
+            font-size: 22px ;
+            width: 80vw;
+            margin: auto;
+            /* width: 100vmin; /* 100vmin = 100% of the smaller side of the viewport */
+           /* height: 100vmax; 100vmax = 100% of the larger side of the viewport */
+        }
+    </style>
+  </head>
+  <body>
+   <div class="box">This is a box Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sit sunt laudantium inventore magni, quisquam, quos error voluptatem est cum, molestiae soluta hic corporis quidem necessitatibus dicta vel! Assumenda rerum hic vel, ullam animi voluptas tempora dicta nulla, iste, corporis id commodi architecto! Molestiae?.
+    
+   <div >This is a box Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sit sunt laudantium inventore magni, quisquam, quos error voluptatem est cum, molestiae soluta hic corporis quidem necessitatibus dicta vel! Assumenda rerum hic vel, ullam animi voluptas tempora dicta nulla, iste, corporis id commodi architecto! Molestiae?.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+   
+    <div >This is a box Lorem ipsum dolor sit ame Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim sit sunt laudantium inventore magni, quisquam, quos error voluptatem est cum, molestiae soluta hic corporis quidem necessitatibus dicta vel! Assumenda rerum hic vel, ullam animi voluptas tempora dicta nulla, iste, corporis id commodi architecto! Molestiae?.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+    </div>
+   </div>
+    </div>
+
+   <div class="container"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magnam facere soluta impedit molestiae rem libero repellendus </p></div>
+
+   <div class="mycont">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>
+<!-- KYA SHIKHA -->
+<!-- /* px, vw, vh, em, rem, vmin, vmax, min-height, min-width, width: % */ -->

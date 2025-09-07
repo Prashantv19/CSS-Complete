@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Selectors</title>
+    <style>
+        div{
+            color: red;
+            background-color: yellow;
+        }
+        .red{
+            color: blue;
+            background-color:blueviolet;
+        }
+        #green{
+            color: green;
+            background-color: lightgray;
+
+        }
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            background-color:green;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        *{
+            margin: 10px;
+            padding: 0px;
+            border: 2px solid black;
+           
+            box-sizing: border-box;            
+        }
+        div > a{
+            color: white;
+            background-color: rgb(255, 0, 0);
+        }
+        div p{
+            color: rgb(81, 0, 255);
+            background-color: lightblue;
+        }
+        
+        a:user-valid{
+            color: olive;
+        }
+        a:focus{
+            color: rgb(60, 0, 255);
+        }
+        a:visited{
+            color: rgb(19, 234, 4);
+        }
+        a:active{
+            color: red;
+        }   
+        a:hover{
+            color: purple;
+        }
+        p:first-child{
+            color: brown;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS-Selectors</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis cum voluptate, id voluptas, porro delectus ab molestiae asperiores soluta perferendis et recusandae dolore.</p>
+    <div>
+        <main>
+        <p>This is a paragraph inside a div.</p>
+        <p class="red">This is a paragraph with class "red".</p>
+        <p id="green">This is a paragraph with id "green".</p>
+        <a href="#">This is a link</a>
+        </main>
+    </div>
+    <img src="c1.svg" alt="calender">
+    <!-- <img src="c2.ai" alt="calender"> -->
+    <img src="c3.png" height="400" width="325" alt="calender">
+    <br>
+    <video src="video3.mp4" autoplay width="335" controls muted>Video</video>
+    <br>
+    <audio src="horror.mp3" controls muted autoplay>Audio</audio>
+</body>
+</html>

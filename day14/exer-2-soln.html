@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div p:first-child {
+        background-color: yellow;
+        color: red;
+      }
+
+      p {
+        background-color: blue;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. The other paragraphs must have background color blue and text color white. The HMTL is written below for your reference. Do not change this html -->
+    <!--Sol:-  it applies first child property -->
+    <div>
+      <p>paragraph no-1</p>
+      <p>I am another para</p>
+      <p>I am also another para</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div>
+      <p>paragraph no-1</p>
+      <p>I am another para</p>
+      <p>I am also another para</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div>
+      <!--<span> is the first child. <p> is the second child, so p:first-child will not apply.-->
+      <span>I'm before</span>
+      <p>❌ Not first child</p>
+    </div>
+    <div>
+      <span>
+        <!--The <p> is not a direct child of <div>, but it is the first child of <span>. So p:first-child still applies, because it only cares about the immediate parent (span). -->
+        <p>✅ First child of span → styled</p>
+        <p>❌ Second child of span</p>
+      </span>
+    </div>
+    
+  </body>
+</html>
