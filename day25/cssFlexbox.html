@@ -1,0 +1,117 @@
+<!-- this written by me -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-FlexBox</title>
+    <style>
+      .container {
+        height: 80vh;
+        border: 2px solid red;
+        display: flex; /* now you can use flex box, it applys on container not on item and now you are able to use display flex box properties, ex. justify-content, align-item */
+        justify-content: center;
+        /*move item horizontally, also we can change the value of it insted of center */
+        align-items: center;
+        /* move item vertically, also we can change the value of it insted of center */
+
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+        /*flex-wrap - ye item ko niche le aata hai usko border ke bahar overlap nahi hone deta hai*/
+
+        /*flex direction - see in image */
+        /*flex box me jo item lay hote hai vo flex direction me lay hote hai */
+        /*justify-content pahle flex direction ko check karega then usko  main axis ke according center kar dega*/
+        /*main start - jaha se main axis start hoti hai */
+        /*main End - jaha se main axis End hoti hai */
+        /* cross start - jaha se Cross axis start hoti hai */
+        /* cross-end -  jaha se cross axis End hoti hai*/
+        /*main size - distance betwwen main start and main end*/
+        /*cross size - distance betwwen Cross start and Cross end*/
+
+        /* align-content: ye multiple line ko center me karta hai, jab more than one line hoti hai tab iska use karte hai */
+        /* align-content: flex-start; */
+        /* "there is no justify-items  in flex box" */
+
+        flex-flow: row wrap;
+
+        gap: 30px; /*item ke bich ka gap define kar sakte hai*/
+        row-gap: 100px;
+        column-gap: 50px;
+        gap: 40px 10px; /* row, column*/
+      }
+      .item {
+        height: 62px;
+        width: 62px;
+        border: 2px solid black;
+        /* margin: 4px; */
+        background-color: blueviolet;
+      }
+      .item {
+        flex-grow: 2; /*jispe laga hoga vo item grow karega same row me hi, agar sare item 1 ki jagah lenge toh ye 2 ki jagah lega*/
+        flex-shrink: 2; /*vo perticular element jisper flex-shrink laga huaa hai vo double spped se shrink hoga*/
+        align-self: flex-end; /*align-content ke rahte ye kaam nahi karega,  ye sirf apne ko align kar lega  jis pe laga hoga*/
+        /* align-self ek item par tabhi effect karega jab aap align-content ko use na karein (ya single line ho).
+
+         Iska matlab:
+         👉 align-content aur align-self ek saath ek hi line par kaam nahi karte. */
+      }
+      .order-1 {
+        order: -1; /*pahle aayega*/
+        order: 0; /*default order*/
+        order: 1; /* baad me */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="order-1">3</div>
+        <div class="item">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+        <!-- <div class="item"></div>
+            
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div> -->
+      </div>
+    </main>
+  </body>
+</html>
